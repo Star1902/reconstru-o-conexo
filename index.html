@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONEXO — Jogo diário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ad ad-left" aria-hidden="true"></div>
+  <div class="ad ad-right" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="brand">
+      <div class="logo-mark" aria-label="Logo Conexo">
+        <i class="orange"></i><i class="green"></i><i class="blue"></i><i class="purple"></i>
+      </div>
+      <h1>CONEXO</h1>
+      <p>Forme 4 grupos de 4 palavras que<br> tenham algo em comum</p>
+    </header>
+
+    <div class="top-actions">
+      <button class="btn primary" id="loginBtn">Login</button>
+      <button class="btn outline" id="adsBtn"><span>▣</span> Remover ads</button>
+    </div>
+
+    <section class="daily-card">
+      <div class="daily-heading">
+        <strong>Jogo diário</strong>
+        <span id="dailyDate">14/10/2026</span>
+        <button class="btn primary play-btn" id="playBtn">Jogar</button>
+      </div>
+      <div class="week" aria-label="Calendário semanal">
+        <div class="day active"><small>dom.</small><b>11</b></div>
+        <div class="day active"><small>seg.</small><b>12</b></div>
+        <div class="day active"><small>ter.</small><b>13</b></div>
+        <div class="day selected"><small>qua.</small><b>14</b></div>
+        <div class="day disabled"><small>qui.</small><b>15</b></div>
+        <div class="day disabled"><small>sex.</small><b>16</b></div>
+        <div class="day disabled"><small>sáb.</small><b>17</b></div>
+      </div>
+      <button class="btn primary archive-btn" id="archiveBtn"><span>▦</span> Jogos anteriores</button>
+    </section>
+
+    <button class="store-row" id="storeBtn">
+      <span class="store-icon">▤</span>
+      <span class="store-copy"><b>Daydash Store</b><small>Vista o jogo que você joga todos os dias</small></span>
+      <span class="chevron">›</span>
+    </button>
+
+    <nav class="settings">
+      <button data-panel="Idioma"><span>文A</span> Idioma</button>
+      <button data-panel="Tema"><span>◉</span> Tema</button>
+      <button data-panel="Feedback"><span>▣</span> Feedback</button>
+    </nav>
+
+    <footer>
+      <div class="daydash">daydash<span>✧</span></div>
+      <div class="games">
+        <div><span class="mini-bars context"></span> CONTEXTO</div>
+        <div><span class="mini-bars conexo"></span> CONEXO</div>
+        <div><span class="mini-bars letrosso"></span> LETROSSO</div>
+        <div><span class="mini-bars expresso"></span> EXPRESSO</div>
+      </div>
+      <div class="legal">
+        <a href="#" data-panel="Termos de Uso">Termos de Uso</a>
+        <a href="#" data-panel="Política de Privacidade">Política de Privacidade</a>
+        <a href="#" data-panel="Política de Reembolso">Política de Reembolso</a>
+      </div>
+      <small class="copyright">© 2023–2026 Daydash. Todos os direitos reservados.</small>
+    </footer>
+  </main>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+      <h2 id="modalTitle">Conexo</h2>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
